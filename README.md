@@ -10,7 +10,7 @@
 
 ## About the application
 
-This application enables a repairer to submit a form which expects a part id against the PartsTrader database to validate that the part exists or any other compatible parts that fall under the same ID exist and can be used by the repairer to make their estimations of a job more efficient.
+This application enables a repairer to submit a form which expects a part number (part id + part code) against the PartsTrader database to validate that the part exists or any other compatible parts exist and can be used by the repairer to make their estimations of a job more efficient.
 
 The application also gives the repairer the ability to add parts to an exclusion list which contains parts that get ignored by the application which when the form is submitted does not send through to the PartsTrader database.
 
