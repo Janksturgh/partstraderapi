@@ -1,0 +1,32 @@
+@use '@/styles/_mixins.scss' as *;
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.container-standard {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.container-narrow {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.container-2col {
+  display: grid;
+  grid-template-columns: 12fr;
+  gap: 2rem;
+
+  @include breakpoint-up() {
+    grid-template-columns: 6fr 6fr;
+  }
+}

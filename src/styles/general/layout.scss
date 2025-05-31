@@ -1,0 +1,13 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  // setting line-height to 1.5 for readability ease for people with low vision / cognitive concerns.
+  line-height: 1.5rem;
+}

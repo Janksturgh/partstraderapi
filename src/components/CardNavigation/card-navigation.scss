@@ -1,0 +1,39 @@
+.card-navigation {
+    background-color: $container-primary;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: #000000;
+    transition: 0.3s ease-in-out;
+
+    @include hover-focus-active {
+        color: $link-hover;
+        transform: translateY(-0.25rem);
+
+        .card-navigation__link-icon {
+            transform: translateX(0.25rem);
+        }
+        
+        .card-navigation__link-icon {
+            transform: translateX(0.25rem);
+            stroke: $link-hover;
+        }
+
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__link {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.25rem;
+    }
+
+    &__link-icon {
+        transition: transform 0.3s ease-in-out;
+    }
+}
