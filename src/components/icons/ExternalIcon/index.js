@@ -1,3 +1,3 @@
-import ExternalIcon from "./ExternalIcon";
+import ExternalIcon from './ExternalIcon';
 
-export default ExternalIcon
+export default ExternalIcon;

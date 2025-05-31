@@ -8,14 +8,14 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
-   test: {
+  test: {
     environment: 'jsdom',
     globals: true,
   },
 
   /**
-   * adding an alias for the src directory to simplify imports 
-   * so they aren't so messy wth paths like ../../ and instead 
+   * adding an alias for the src directory to simplify imports
+   * so they aren't so messy wth paths like ../../ and instead
    * can use @/ for src.
    */
   resolve: {
@@ -38,4 +38,4 @@ export default defineConfig({
       },
     },
   },
-})
+});

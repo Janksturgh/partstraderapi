@@ -46,7 +46,9 @@ describe('Header mobile menu behavior', () => {
     expect(closeButton).toBeInTheDocument();
 
     // The nav should have the open class applied
-    const nav = screen.getByRole('navigation', { name: /main site navigation/i });
+    const nav = screen.getByRole('navigation', {
+      name: /main site navigation/i,
+    });
     expect(nav.className).toContain('header__nav--open');
   });
 });

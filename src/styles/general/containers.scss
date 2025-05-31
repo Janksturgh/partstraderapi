@@ -1,4 +1,4 @@
-@use '@/styles/_mixins.scss' as *;
+@use "@/styles/_mixins.scss" as *;
 
 .container-fluid {
   width: 100%;
@@ -8,17 +8,17 @@
 }
 
 .container-standard {
-    max-width: 68rem;
-    margin: 0 auto;
-    padding: 2rem;
-    box-sizing: border-box;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .container-narrow {
-    max-width: 48rem;
-    margin: 0 auto;
-    padding: 2rem;
-    box-sizing: border-box;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .container-2col {

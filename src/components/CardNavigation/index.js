@@ -1,3 +1,3 @@
-import CardNavigation from "./CardNavigation";
+import CardNavigation from './CardNavigation';
 
 export default CardNavigation;
