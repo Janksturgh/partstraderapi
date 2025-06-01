@@ -7,6 +7,10 @@
  */
 
 export default function validatePartNumber(partNumber) {
+
+  if (partNumber === "") {
+    throw new Error("Please enter a part number");
+  }
   /**
    * i think about 1% of people can write regex without help, this was generated at https://rows.com/tools/regex-generator
    * The regex checks that the partNumber is 4 digits at the start, a hyphen, followed
