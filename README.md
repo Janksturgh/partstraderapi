@@ -89,4 +89,4 @@ npm run preview
 - Vite Aliases (@) – Makes imports tidier by letting me use @/ instead of messy relative paths.
 
 ## Deployments
-Deployments are automated in the deploy.yml file which deploys to github pages on pull request merges into the main branch.
+Deployments are automated in the deploy.yml file which deploys to github pages on pull request merges into the gh-pages branch.
