@@ -1,5 +1,5 @@
-import Layout from '@/layouts/Layout.jsx';
 import { useState } from 'react';
+import Layout from '@/layouts/Layout.jsx';
 import checkExclusionsList from '@/utils/checkExclusionsList.js';
 
 /**
