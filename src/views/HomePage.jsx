@@ -5,12 +5,12 @@ export default function HomePage() {
   const cards = [
     {
       title: 'Part Lookup',
-      description: 'Look up compatible parts by their id.',
+      description: 'Look up compatible parts by their part number.',
       url: '/part-lookup',
     },
     {
-      title: 'Exclusions',
-      description: 'Add, edit or delete items from yuor exclusions list.',
+      title: 'Part Exclusions',
+      description: 'View a list of parts that are excluded from quote requests.',
       url: '/exclusions',
     },
   ];
