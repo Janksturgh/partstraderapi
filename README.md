@@ -19,6 +19,12 @@ The application also gives the repairer the ability to views the exclusion list 
 
 Please follow the instructions below to get up and running locally:
 
+Install Node - preferrebly install it using NVM:
+
+[download NVM](https://github.com/nvm-sh/nvm)
+
+For windows make sure you run `nvm on` to enable version management.
+
 ```
 git clone https://github.com/Janksturgh/partstraderapi.git
 
@@ -45,6 +51,14 @@ npm run test:ui
 ```
 
 Which will open an interface in the browser to see the tests run.
+
+To simulate what the built application will look like locally, run the following commands:
+
+```
+npm run build
+
+npm run preview
+```
 
 ## Tech and principals used
 
