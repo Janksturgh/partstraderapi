@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 /**
  * @description Arrow Icon is a simple SVG component that renders an arrow icon.
  * It can be used in various parts of the application where an arrow icon is needed.
@@ -27,3 +28,7 @@ export default function ArrowIcon({ className = '' }) {
     </svg>
   );
 }
+
+ArrowIcon.propTypes = {
+  className: PropTypes.string,
+};

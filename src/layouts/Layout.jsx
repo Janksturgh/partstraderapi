@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Banner from '@/components/Banner';
 import Header from '@/components/Header';
 
@@ -19,3 +20,9 @@ export default function Layout({ title, description = '', children }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};

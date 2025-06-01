@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import './card-navigation.scss';
-import { Link } from 'react-router-dom';
 
 /**
  * @description CardNavigation component renders a card-like navigation element.
@@ -23,3 +24,9 @@ export default function CardNavigation({ title, description, url }) {
     </Link>
   );
 }
+
+CardNavigation.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};

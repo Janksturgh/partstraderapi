@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './banner.scss';
 
 /**
@@ -17,3 +18,8 @@ export default function Banner({ title, description = '' }) {
     </div>
   );
 }
+
+Banner.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
