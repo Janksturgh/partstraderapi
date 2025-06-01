@@ -1,6 +1,6 @@
 import Layout from '@/layouts/Layout.jsx';
 import { useState } from 'react';
-import validatePartNumber from '@/utils/validatePartNumber.js';
+import checkExclusionsList from '@/utils/checkExclusionsList.js';
 
 /**
  * @description PartLookupPage component allows users to search for a specific part by it's part number.
@@ -31,9 +31,17 @@ export default function PartLookupPage() {
 
     // try-catch block to handle validation and set the result message
     try {
-      validatePartNumber(inputValue);
-      setResult(`Part number is valid: ${inputValue}`);
-      setResultType('success');
+      const result = checkExclusionsList(inputValue);
+
+      /**
+       * If the part number returns true from the checkExclusionsList function,
+       * it means the part number is valid and not excluded
+       */
+      if (result === true) {
+        // If the part number is valid and not excluded
+        setResult(`Part number is valid: ${inputValue}`);
+        setResultType('success');
+      }
     } catch (error) {
       setResult(error.message);
       setResultType('error');
