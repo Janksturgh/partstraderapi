@@ -8,6 +8,27 @@
   margin: 0 auto;
   padding: 1rem;
 
+  &__label-and-tooltip-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-direction: row;
+  }
+
+  &__tooltip-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include hover-focus-active {
+      circle {
+        fill: $link-hover;
+      }
+    }
+  }
+
   &__label {
     font-weight: 600;
     font-size: 1.25rem;
@@ -59,6 +80,13 @@
 
   &__icon {
     transition: 0.3s ease-in-out;
+  }
+
+  &__helper-text {
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #3e4143;
+    margin: 0;
   }
 
   &__result-message {
