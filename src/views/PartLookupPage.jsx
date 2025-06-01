@@ -48,7 +48,7 @@ export default function PartLookupPage() {
     }
   };
   return (
-    <Layout title="Part Lookup" description="Search for a specific part by its ID">
+    <Layout title="Part Lookup" description="Search for a specific part by its part number.">
       <div className="part-lookup-page">
         <form className="form" onSubmit={handleSubmit}>
           <label className="form__label" htmlFor="part-number">
