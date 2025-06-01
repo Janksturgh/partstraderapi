@@ -8,7 +8,7 @@ import '@/styles/app.scss';
 // The root component of the application that sets up the routes
 export default function App() {
   return (
-    <Router>
+    <Router basename="/partstraderapi">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/part-lookup" element={<PartLookupPage />} />
