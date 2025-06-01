@@ -55,11 +55,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__logo">
-        <a
-          href="/"
+        <Link
+          aria-label="Link to home page"
+          to="/"
           className="header__logo-link"
-          aria-label="Parts Trader Home"
-          title="Parts Trader Home"
+          title="Link to home page"
         >
           <img
             src="./parts-trader-logo.png"
@@ -67,7 +67,7 @@ export default function Header() {
             className="header__logo-image"
             width="170"
           />
-        </a>
+        </Link>
       </div>
       <nav
         className={`header__nav ${toggleMobileMenu ? 'header__nav--open' : ''}`}
