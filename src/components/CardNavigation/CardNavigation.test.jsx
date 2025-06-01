@@ -8,12 +8,7 @@ describe('CardNavigation Component', () => {
   it('renders the title, description, and Learn More text', () => {
     render(
       <MemoryRouter>
-        <CardNavigation
-          title="Test Title"
-          description="Test Description"
-          url="/test-url"
-          external={false}
-        />
+        <CardNavigation title="Test Title" description="Test Description" url="/test-url" />
       </MemoryRouter>
     );
 

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './header.scss';
 import { useEffect, useState, useRef } from 'react';
+import logo from '@/assets/parts-trader-logo.png';
 
 /**
  * @description Header component renders the site header with a logo and navigation links.
@@ -61,12 +62,7 @@ export default function Header() {
           className="header__logo-link"
           title="Link to home page"
         >
-          <img
-            src="./parts-trader-logo.png"
-            alt="Parts Trader"
-            className="header__logo-image"
-            width="170"
-          />
+          <img src={logo} alt="Parts Trader" className="header__logo-image" width="170" />
         </Link>
       </div>
       <nav
