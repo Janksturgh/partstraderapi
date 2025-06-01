@@ -1,10 +1,14 @@
-import exclusions from '@/data/exclusions.json';
+import exclusions from '@/data/Exclusions.json';
 import validatePartNumber from '@/utils/validatePartNumber.js';
+import normalizeToLowerCase from '@/utils/normalizeToLowerCase.js';
 
 /**
  * @description checkExclusionsList function first checks if the part is valid, if it is check
  * if a part number is in the exclusions list.
  * @param {string} partNumber - The part number to validate.
+ * @returns {boolean|Array} Returns true if the part number is valid and not excluded,
+ * or an empty array if the part number is valid but excluded.
+ * @throws {Error} Throws an error if the part number is invalid coming from the validatePartNumber function.
  */
 export default function checkExclusionsList(partNumber) {
   // Validate the part number format first
@@ -13,7 +17,9 @@ export default function checkExclusionsList(partNumber) {
   validatePartNumber(partNumber);
 
   // Check if the part number is in the exclusions list
-  const isExcluded = exclusions.some((exclusion) => exclusion.PartNumber == partNumber);
+  const isExcluded = exclusions.some(
+    (exclusion) => normalizeToLowerCase(exclusion.PartNumber) == normalizeToLowerCase(partNumber)
+  );
 
   if (isExcluded) {
     return []; // Valid, but excluded
