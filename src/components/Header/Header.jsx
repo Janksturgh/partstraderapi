@@ -62,7 +62,7 @@ export default function Header() {
           title="Parts Trader Home"
         >
           <img
-            src="/parts-trader-logo.png"
+            src="./parts-trader-logo.png"
             alt="Parts Trader"
             className="header__logo-image"
             width="170"
