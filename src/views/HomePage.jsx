@@ -6,13 +6,13 @@ export default function HomePage() {
     {
       title: 'Part Lookup',
       description: 'Look up compatible parts by their id.',
-      url: '/part-lookup',
+      url: './part-lookup',
       external: false,
     },
     {
       title: 'Exclusions',
       description: 'Add, edit or delete items from yuor exclusions list.',
-      url: '/exclusions',
+      url: './exclusions',
       external: false,
     },
     {
