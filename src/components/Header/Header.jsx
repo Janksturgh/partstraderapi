@@ -78,6 +78,7 @@ export default function Header() {
           aria-controls="main-navigation"
           className="header__toggle header__toggle--close"
           ref={closeButtonRef}
+          type="button"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -120,6 +121,7 @@ export default function Header() {
           aria-expanded={toggleMobileMenu}
           aria-controls="main-navigation"
           className="header__toggle"
+          type="button"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
