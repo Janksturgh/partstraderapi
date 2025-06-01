@@ -1,0 +1,58 @@
+@use "@/styles/_variables.scss" as *;
+@use "@/styles/_mixins.scss" as *;
+
+.exclusion-items {
+  &__header-row {
+    display: none;
+    background-color: $container-primary;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #e6e7e8;
+
+    @include breakpoint-up() {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+    }
+  }
+
+  &__header-row-item {
+    font-weight: 600;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 12fr;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 12fr;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+
+    @include breakpoint-up() {
+      grid-template-columns: 4fr 8fr;
+    }
+
+    &:nth-child(even) {
+      background-color: $container-primary;
+      border-bottom: 1px solid #e6e7e8;
+      border-top: 1px solid #e6e7e8;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+
+    @include breakpoint-up() {
+      font-weight: 400;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+
+    @include breakpoint-up() {
+      margin-top: 1rem;
+    }
+  }
+}
