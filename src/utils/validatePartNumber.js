@@ -7,10 +7,6 @@
  */
 
 export default function validatePartNumber(partNumber) {
-  // Check if partNumber is a string
-  if (typeof partNumber !== 'string') {
-    throw new Error('Part number must be a string');
-  }
   /**
    * i think about 1% of people can write regex without help, this was generated at https://rows.com/tools/regex-generator
    * The regex checks that the partNumber is 4 digits at the start, a hyphen, followed
