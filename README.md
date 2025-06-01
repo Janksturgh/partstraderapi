@@ -7,13 +7,14 @@
 3. [Testing the application](#testing-the-application)
 4. [Deploying the application](#deploying-the-application)
 5. [Tech and principals used](#tech-and-principals-used)
-6. [Deployments](#deployments)
 
 ## About the application
 
 This application enables a repairer to submit a form which expects a part number (part id + part code) against the PartsTrader database to validate that the part exists or any other compatible parts exist and can be used by the repairer to make their estimations of a job more efficient.
 
 The application also gives the repairer the ability to views the exclusion list which contains parts that get ignored by the application which when the form is submitted does not send through to the PartsTrader database.
+
+The application is hosted in Github pages and can be viewed here https://janksturgh.github.io/partstraderapi
 
 ## Installation
 
@@ -87,6 +88,3 @@ npm run preview
 
 - ESLint + Prettier – Keeps the codebase clean and consistent with linting and auto-formatting.
 - Vite Aliases (@) – Makes imports tidier by letting me use @/ instead of messy relative paths.
-
-## Deployments
-Deployments are automated in the deploy.yml file which deploys to github pages on pull request merges into the gh-pages branch.
