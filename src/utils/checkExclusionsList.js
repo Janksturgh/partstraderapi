@@ -11,12 +11,17 @@ import normalizeToLowerCase from '@/utils/normalizeToLowerCase.js';
  * @throws {Error} Throws an error if the part number is invalid coming from the validatePartNumber function.
  */
 export default function checkExclusionsList(partNumber) {
-  // Validate the part number format first
-  // If the part number is invalid, an error will be thrown
-  // and the exclusions check will not be performed
+  /** Validate the part number format first.
+  * If the part number is invalid, an error will be thrown
+  * and the exclusions check will not be performed
+  */
   validatePartNumber(partNumber);
 
-  // Check if the part number is in the exclusions list
+  /** Check if the part number is in the exclusions list.
+  * Using some here so when the condition is met, the check will stop
+  * rather than going through the rest of the array and also we only 
+  * need a true/false outcome.
+  */
   const isExcluded = exclusions.some(
     (exclusion) => normalizeToLowerCase(exclusion.PartNumber) == normalizeToLowerCase(partNumber)
   );
