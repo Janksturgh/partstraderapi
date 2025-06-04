@@ -19,7 +19,7 @@ export default function checkExclusionsList(partNumber) {
 
   /** Check if the part number is in the exclusions list.
    * Using some here so when the condition is met, the check will stop
-   * rather than going through the rest of the array and also we only 
+   * rather than going through the rest of the array and also we only
    * need a true/false outcome.
    */
   const isExcluded = exclusions.some(
