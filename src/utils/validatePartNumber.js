@@ -13,7 +13,7 @@ export default function validatePartNumber(partNumber) {
   /**
    * i think about 1% of people can write regex without help, this was generated at https://rows.com/tools/regex-generator
    * The regex checks that the partNumber is 4 digits at the start, a hyphen, followed
-   *  by one or more alphanumeric characters (letters and/or digits)
+   *  by four or more alphanumeric characters (letters and/or digits)
    */
   const regex = /^\d{4}-[A-Za-z0-9]{4,}$/;
 
