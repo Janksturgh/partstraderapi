@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import Layout from '@/layouts/Layout.jsx';
-import checkExclusionsList from '@/utils/checkExclusionsList.js';
-
 /**
  * @description PartLookupPage component allows users to search for a specific part by it's part number.
  * @returns {JSX.Element} The rendered PartLookupPage component.
@@ -24,28 +22,42 @@ export default function PartLookupPage() {
 
   /**
    * handleSubmit function to validate the part number when the form is submitted
-   * If the part number is valid, it clears the result message.
-   * If the part number is invalid, it sets an result message.
    * @param {string} event
    */
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // try-catch block to handle validation and set the result message
-    try {
-      const result = checkExclusionsList(inputValue);
+    // handling the empty input value here instead of at the api level so it wouldn't incur additional api calls when it isn't needed.
+    if (!inputValue.trim()) {
+      setResult('Please enter a part number.');
+      setResultType('error');
+      return;
+    }
 
-      /**
-       * If the part number returns true from the checkExclusionsList function,
-       * it means the part number is valid and not excluded
-       */
-      if (result === true) {
-        // If the part number is valid and not excluded
-        setResult(`Part number is valid: ${inputValue}`);
-        setResultType('success');
+    // fetching the backend api endpoint
+    const response = await fetch(
+      `http://localhost:5186/api/parts/validate?partNumber=${encodeURIComponent(inputValue)}`
+    );
+
+    // creating a data varible for the json response just to make it cleaner below
+    const data = await response.json();
+
+    // creating switch statement to check against the returned api responses to handle the success/excluded response correctly.
+    if (response.ok) {
+      switch (data.resultType) {
+        case 'Success':
+          setResult(`${data.result}\nCompatible parts: ${data.compatibleParts?.join(', ')}`);
+          setResultType('success');
+          break;
+
+        case 'Excluded':
+          setResult(null);
+          setResultType('excluded');
+          break;
       }
-    } catch (error) {
-      setResult(error.message);
+    } else {
+      // If the response is not ok then fallback to the error result message
+      setResult(data.result);
       setResultType('error');
     }
   };
@@ -75,11 +87,11 @@ export default function PartLookupPage() {
                 <text
                   x="10"
                   y="14"
-                  text-anchor="middle"
-                  font-size="12"
-                  font-family="Arial, sans-serif"
+                  textAnchor="middle"
+                  fontSize="12"
+                  fontFamily="Arial, sans-serif"
                   fill="#ffffff"
-                  font-weight="bold"
+                  fontWeight="bold"
                 >
                   ?
                 </text>
